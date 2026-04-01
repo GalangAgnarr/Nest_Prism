@@ -8,16 +8,16 @@
 ALTER TABLE `loan` DROP COLUMN `returnDate`;
 
 -- CreateTable
-CREATE TABLE `ReturnedBook` (
+CREATE TABLE `returnedBook` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `loanId` INTEGER NOT NULL,
     `returnDate` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `ReturnedBook_loanId_key`(`loanId`),
+    UNIQUE INDEX `returnedBook_loanId_key`(`loanId`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `ReturnedBook` ADD CONSTRAINT `ReturnedBook_loanId_fkey` FOREIGN KEY (`loanId`) REFERENCES `Loan`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `returnedBook` ADD CONSTRAINT `returnedBook_loanId_fkey` FOREIGN KEY (`loanId`) REFERENCES `loan`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

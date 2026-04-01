@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE `Student` (
+CREATE TABLE `student` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `nis` VARCHAR(191) NOT NULL,
     `name` VARCHAR(191) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `Student` (
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `Student_nis_key`(`nis`),
-    UNIQUE INDEX `Student_email_key`(`email`),
+    UNIQUE INDEX `student_nis_key`(`nis`),
+    UNIQUE INDEX `student_email_key`(`email`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

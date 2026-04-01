@@ -5,7 +5,7 @@
 
 */
 -- DropForeignKey
-ALTER TABLE `returnedbook` DROP FOREIGN KEY `ReturnedBook_loanId_fkey`;
+ALTER TABLE `returnedbook` DROP FOREIGN KEY `returnedBook_loanId_fkey`;
 
 -- AlterTable
 ALTER TABLE `loan` ADD COLUMN `returnDate` DATETIME(3) NULL;
