@@ -8,7 +8,7 @@
 ALTER TABLE `loan` DROP COLUMN `returnDate`;
 
 -- CreateTable
-CREATE TABLE `returnedBook` (
+CREATE TABLE `returnedbook` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `loanId` INTEGER NOT NULL,
     `returnDate` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
