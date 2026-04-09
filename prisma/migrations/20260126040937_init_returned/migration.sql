@@ -15,9 +15,9 @@ CREATE TABLE `returnedBook` (
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `returnedBook_loanId_key`(`loanId`),
+    UNIQUE INDEX `returnedbook_loanId_key`(`loanId`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `returnedBook` ADD CONSTRAINT `returnedBook_loanId_fkey` FOREIGN KEY (`loanId`) REFERENCES `loan`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `returnedbook` ADD CONSTRAINT `returnedbook_loanId_fkey` FOREIGN KEY (`loanId`) REFERENCES `loan`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
