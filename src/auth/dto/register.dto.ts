@@ -4,12 +4,12 @@ import { UserRole } from '@prisma/client';
 
 export class RegisterDto {
   @IsString()
-  username: string;
+  username!: string;
 
   @IsString()
   @MinLength(6)
-  password: string;
+  password!: string;
 
   @IsEnum(UserRole)
-  role: UserRole; // ADMIN | PETUGAS
+  role!: UserRole; // ADMIN | PETUGAS
 }
